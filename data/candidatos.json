@@ -1,1 +1,30 @@
-[]
+[
+  {
+    "id": 1779766719512,
+    "nombre": "gabriel",
+    "rol": "veedor",
+    "propuesta": "¡garantizar derechos!",
+    "estado": "Perfil de práctica académica"
+  },
+  {
+    "id": 1779766782427,
+    "nombre": "Pikachu",
+    "rol": "Veedor",
+    "propuesta": "¡Electrificar con mucha energía los derechos!",
+    "estado": "Perfil de práctica académica"
+  },
+  {
+    "id": 1779767019667,
+    "nombre": "Fabio",
+    "rol": "Veedor",
+    "propuesta": "Diseñar al mundo democrático",
+    "estado": "Perfil de práctica académica"
+  },
+  {
+    "id": 1779893878680,
+    "nombre": "GAvbo",
+    "rol": "Cuidador",
+    "propuesta": "Derechos",
+    "estado": "Perfil de práctica académica"
+  }
+]

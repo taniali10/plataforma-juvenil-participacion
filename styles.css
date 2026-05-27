@@ -1,60 +1,88 @@
+/* styles.css
+   CSS simple y entendible para principiantes.
+   Usa colores suaves, tipografía limpia y espacio agradable. */
+
+/* Estilo general de la página */
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
-  background-color: #f8f5f7;
-  color: #333;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f7fb; /* color de fondo muy suave */
+  color: #1f2937; /* texto oscuro y fácil de leer */
 }
 
-header {
-  background-color: #8A1538;
-  color: white;
-  padding: 30px;
-  text-align: center;
+/* Contenedor central para dejar márgenes y mejor lectura */
+body > * {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 24px;
 }
 
-main {
-  padding: 25px;
-  max-width: 900px;
-  margin: auto;
+/* Encabezado principal */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+  color: #0f4c81; /* tono profesional azul oscuro */
 }
 
-section {
-  background-color: white;
-  margin-bottom: 20px;
-  padding: 20px;
-  border-left: 5px solid #C2185B;
-  border-radius: 8px;
+/* Subtítulos */
+h2,
+h3 {
+  color: #102a43;
+  margin-top: 32px;
+  margin-bottom: 12px;
 }
 
-h1,
 h2 {
-  margin-top: 0;
+  font-size: 1.75rem;
 }
 
-button {
+h3 {
+  font-size: 1.25rem;
+}
+
+/* Párrafos con mayor legibilidad */
+p {
+  line-height: 1.7;
+  font-size: 1rem;
+  background: #ffffff;
+  border-left: 4px solid #0f4c81;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(15, 76, 129, 0.08);
+}
+
+/* Espacio extra debajo del último párrafo */
+p:last-of-type {
+  margin-bottom: 24px;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 600px) {
+  body > * {
+    padding: 16px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+.btnPerfil {
   background-color: #8A1538;
   color: white;
   border: none;
-  padding: 12px 18px;
-  border-radius: 6px;
+  padding: 10px 16px;
+  border-radius: 5px;
   cursor: pointer;
-}
-
-button:hover {
-  background-color: #6f102d;
-}
-
-footer {
-  text-align: center;
-  padding: 15px;
-  background-color: #eee;
 }
 
 .seccion-candidatos {
   background-color: white;
-  padding: 25px;
-  border-radius: 12px;
-  margin-top: 25px;
 }
 
 .contenedor-candidatos {
@@ -79,16 +107,6 @@ footer {
 
 .tarjeta-candidato button {
   margin-top: 10px;
-  background-color: #8A1538;
-  color: white;
-  border: none;
-  padding: 10px 14px;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-.tarjeta-candidato button:hover {
-  background-color: #C2185B;
 }
 
 .detalle-perfil {
@@ -96,5 +114,30 @@ footer {
   padding: 15px;
   background-color: #F9EEF3;
   border-left: 5px solid #C2185B;
+  border-radius: 8px;
+}
+
+
+.formulario-candidato input,
+.formulario-candidato textarea {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+#mensajeGuardado {
+  margin-top: 12px;
+  font-weight: bold;
+  color: #8A1538;
+}
+
+.tarjeta-guardada {
+  margin-top: 12px;
+  padding: 12px;
+  border-left: 5px solid #8A1538;
+  background-color: #F9EEF3;
   border-radius: 8px;
 }
