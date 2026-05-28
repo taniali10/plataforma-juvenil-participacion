@@ -10,32 +10,24 @@ const contenedorCandidatosGuardados = document.getElementById("contenedorCandida
 
 
 async function cargarCandidatosGuardados() {
-  try {
-    const respuesta = await fetch("/api/candidatos");
-    if (!respuesta.ok) {
-      throw new Error("No se pudo cargar los candidatos");
-    }
+  const respuesta = await fetch("/api/candidatos");
+  const candidatos = await respuesta.json();
 
-    const candidatos = await respuesta.json();
-    contenedorCandidatosGuardados.innerHTML = "";
+  contenedorCandidatosGuardados.innerHTML = "";
 
-    candidatos.forEach(function (candidato) {
-      const tarjeta = document.createElement("div");
-      tarjeta.classList.add("tarjeta-guardada");
+  candidatos.forEach(function (candidato) {
+    const tarjeta = document.createElement("div");
+    tarjeta.classList.add("tarjeta-guardada");
 
-      tarjeta.innerHTML = `
-        <h3>${candidato.nombre}</h3>
-        <p><strong>Rol:</strong> ${candidato.rol}</p>
-        <p><strong>Propuesta:</strong> ${candidato.propuesta}</p>
-        <p><strong>Estado:</strong> ${candidato.estado}</p>
-      `;
+    tarjeta.innerHTML = `
+      <h3>${candidato.nombre}</h3>
+      <p><strong>Rol:</strong> ${candidato.rol}</p>
+      <p><strong>Propuesta:</strong> ${candidato.propuesta}</p>
+      <p><strong>Estado:</strong> ${candidato.estado}</p>
+    `;
 
-      contenedorCandidatosGuardados.appendChild(tarjeta);
-    });
-  } catch (error) {
-    console.error(error);
-    contenedorCandidatosGuardados.innerHTML = "<p>No se pudieron cargar los perfiles guardados.</p>";
-  }
+    contenedorCandidatosGuardados.appendChild(tarjeta);
+  });
 }
 
 btnGuardarCandidato.addEventListener("click", async function () {
@@ -54,30 +46,22 @@ btnGuardarCandidato.addEventListener("click", async function () {
     propuesta: propuesta
   };
 
-  try {
-    const respuesta = await fetch("/api/candidatos", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(nuevoPerfil)
-    });
+  const respuesta = await fetch("/api/candidatos", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(nuevoPerfil)
+  });
 
-    const resultado = await respuesta.json();
-    if (!respuesta.ok) {
-      mensajeGuardado.textContent = resultado.mensaje || "Error guardando el perfil.";
-      return;
-    }
+  const resultado = await respuesta.json();
+  mensajeGuardado.textContent = resultado.mensaje;
 
-    mensajeGuardado.textContent = resultado.mensaje;
-    document.getElementById("nombreCandidato").value = "";
-    document.getElementById("rolCandidato").value = "";
-    document.getElementById("propuestaCandidato").value = "";
-    cargarCandidatosGuardados();
-  } catch (error) {
-    console.error(error);
-    mensajeGuardado.textContent = "Error de conexión: no se pudo guardar el perfil.";
-  }
+  document.getElementById("nombreCandidato").value = "";
+  document.getElementById("rolCandidato").value = "";
+  document.getElementById("propuestaCandidato").value = "";
+
+  cargarCandidatosGuardados();
 });
 
 cargarCandidatosGuardados();
