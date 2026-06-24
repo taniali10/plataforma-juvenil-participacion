@@ -1,0 +1,108 @@
+BITÁCORA DE TERMINAL - CLASE 36
+Código abierto, soberanía tecnológica y primeros pasos en terminal
+
+Nombre del estudiante: Tania_Trejo  
+Fecha: 04/06/2026
+Clase: 36
+Entorno usado: Codespaces
+
+1. ¿Qué es un sistema operativo?
+Respuesta: Es el programa que permite que el computador funcione y administra sus recursos.
+
+2. ¿Qué es el código abierto?
+Respuesta: Es un software cuyo código puede ser visto, usado y modificado por cualquiera.
+
+3. ¿Qué significa soberanía tecnológica?
+Respuesta: Es tener control sobre la tecnología que se utiliza sin depender de terceros.
+
+4. ¿Qué es Linux?
+Respuesta: Es un sistema operativo libre y de código abierto.
+
+5. ¿Qué es Debian?
+Respuesta: Es una distribución de Linux reconocida por su estabilidad y seguridad.
+
+6. ¿Qué es un servidor?
+Respuesta: Es un equipo que ofrece servicios o información a otros dispositivos.
+
+7. ¿Qué es una terminal?
+Respuesta: Es una herramienta que permite dar instrucciones al sistema mediante comandos.
+
+8. Comandos ejecutados y resultado observado:
+
+whoami
+Resultado: Mostró el usuario actual.
+
+hostname
+Resultado: Mostró el nombre del equipo.
+
+date
+Resultado: Mostró la fecha y hora.
+
+pwd
+Resultado: Mostró la ubicación actual.
+
+ls
+Resultado: Mostró los archivos y carpetas.
+
+ls -la
+Resultado: Mostró archivos ocultos y detalles.
+
+mkdir practica-linux
+Resultado: Creó una carpeta nueva.
+
+cd practica-linux
+Resultado: Ingresó a la carpeta creada.
+
+touch notas.txt
+Resultado: Creó un archivo vacío.
+
+echo "Mi primera practica en terminal Debian" > notas.txt
+Resultado: Guardó el texto en el archivo.
+
+cat notas.txt
+Resultado: Mostró el contenido del archivo.
+
+cp notas.txt copia-notas.txt
+Resultado: Creó una copia del archivo.
+
+mv copia-notas.txt notas-renombradas.txt
+Resultado: Renombró el archivo.
+
+mkdir respaldo
+Resultado: Creó una carpeta llamada respaldo.
+
+mv notas-renombradas.txt respaldo/
+Resultado: Movió el archivo a respaldo.
+
+df -h
+Resultado: Mostró el espacio en disco.
+
+free -h
+Resultado: Mostró el uso de memoria.
+
+uname -a
+Resultado: Mostró información del sistema.
+
+history
+Resultado: Mostró los comandos ejecutados.
+
+ip a
+Resultado: Mostró la configuración de red.
+
+top
+Resultado: Mostró los procesos en ejecución.
+
+9. ¿Qué comando me pareció más útil y por qué?
+Respuesta: ls, porque permite ver rápidamente los archivos y carpetas.
+
+10. ¿Qué aprendí sobre el uso responsable de la terminal?
+Respuesta: Que hay que revisar bien los comandos antes de ejecutarlos.
+
+11. ¿Qué información no debo publicar en capturas o evidencias?
+Respuesta: Contraseñas, direcciones IP y datos personales.
+
+12. ¿Qué cuidados debo tener al trabajar en un servidor?
+Respuesta: No borrar archivos importantes y usar permisos adecuados.
+
+13. ¿Cómo se relaciona la terminal con la soberanía tecnológica?
+Respuesta: Porque permite administrar y entender mejor la tecnología que usamos.
