@@ -1,0 +1,57 @@
+BITÁCORA DE PERMISOS - CLASE 37
+
+Nombre: Tania Trejo
+Fecha: 05/06/2026
+Entorno: GitHub Codespaces
+
+1. ¿Qué significa el permiso -rw-rw-r--?
+Respuesta: Que el propietario y el grupo pueden leer y escribir, y otros solo pueden leer.
+
+2. ¿Qué significa chmod 777?
+Respuesta: Que todos tienen permisos de lectura, escritura y ejecución.
+
+3. ¿Por qué 777 es riesgoso?
+Respuesta: Porque cualquier usuario puede modificar o eliminar archivos.
+
+4. ¿Qué permisos son más adecuados para un archivo .env?
+Respuesta: 600, para que solo el propietario pueda leerlo y modificarlo.
+
+5. ¿Por qué un archivo .env no debe estar dentro de una carpeta pública?
+Respuesta: Porque puede exponer claves, contraseñas y datos sensibles.
+
+6. ¿Qué pasó cuando se simuló la exposición de config-expuesto.env?
+Respuesta: Se demostró que información privada podía quedar accesible para otras personas.
+
+7. ¿Cómo se corrigió el problema?
+Respuesta: Moviendo el archivo a una ubicación segura y ajustando sus permisos.
+
+8. ¿Qué relación tiene esto con Telegram, Node.js o n8n?
+Respuesta: Que estas herramientas suelen usar archivos .env para guardar tokens y configuraciones importantes.
+
+9. ¿Qué aprendí sobre mínimo privilegio?
+Respuesta: Que se deben otorgar únicamente los permisos necesarios para reducir riesgos de seguridad.1. ¿Qué significa el permiso -rw-rw-r--?
+Respuesta: Que el propietario y el grupo pueden leer y escribir, y otros solo pueden leer.
+
+2. ¿Qué significa chmod 777?
+Respuesta: Que todos tienen permisos de lectura, escritura y ejecución.
+
+3. ¿Por qué 777 es riesgoso?
+Respuesta: Porque cualquier usuario puede modificar o eliminar archivos.
+
+4. ¿Qué permisos son más adecuados para un archivo .env?
+Respuesta: 600, para que solo el propietario pueda leerlo y modificarlo.
+
+5. ¿Por qué un archivo .env no debe estar dentro de una carpeta pública?
+Respuesta: Porque puede exponer claves, contraseñas y datos sensibles.
+
+6. ¿Qué pasó cuando se simuló la exposición de config-expuesto.env?
+Respuesta: Se demostró que información privada podía quedar accesible para otras personas.
+
+7. ¿Cómo se corrigió el problema?
+Respuesta: Moviendo el archivo a una ubicación segura y ajustando sus permisos.
+
+8. ¿Qué relación tiene esto con Telegram, Node.js o n8n?
+Respuesta: Que estas herramientas suelen usar archivos .env para guardar tokens y configuraciones importantes.
+
+9. ¿Qué aprendí sobre mínimo privilegio?
+Respuesta: Que se deben otorgar únicamente los permisos necesarios para reducir riesgos de seguridad.
